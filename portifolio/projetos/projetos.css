@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    color: #000;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da área de projetos */
+main {
+    padding-top: 80px; /* Compensa o cabeçalho fixo */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    grid-template-rows: repeat(2, 1fr); /* 2 linhas */
+    gap: 30px; /* Espaçamento entre os projetos */
+    padding: 40px;
+    justify-items: center;
+    height: 80vh; /* Ajusta para ocupar 80% da altura da tela */
+}
+
+.project {
+    background-color: #ff8a80;
+    width: 100%; /* Agora ocupa toda a largura da célula da grid */
+    height: 100%; /* Agora ocupa toda a altura da célula da grid */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    background-color: #e57373; /* Fundo mais escuro no hover */
+}
+
+.proj-info {
+    font-size: 1.5rem; /* Aumenta o tamanho do texto */
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.proj-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem; /* Aumenta o tamanho da descrição */
+    color: white;
+    opacity: 0; /* Invisível por padrão */
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .proj-info {
+    opacity: 0; /* Oculta a info do projeto ao passar o mouse */
+}
+
+.project:hover .proj-description {
+    opacity: 1; /* Faz a descrição aparecer no meio */
+}
