@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+}
+
+header {
+    background-color: #3c3c3c;
+    padding: 25px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.habilidades {
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icones img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
